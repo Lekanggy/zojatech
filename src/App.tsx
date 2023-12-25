@@ -1,13 +1,15 @@
-import { Container } from "./globalStyles"
+//import { Container } from "./globalStyles"
+import GlobalStyle from "./globalStyles"
+import ChooseSignUp from "./pages/signUp/ChooseSignUp"
 
 
 function App() {
   
   return (
-    <Container>
-     
-       
-    </Container>
+    <>
+     <GlobalStyle/>
+     <ChooseSignUp/>
+    </>
   )
 }
 

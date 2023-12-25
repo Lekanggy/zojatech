@@ -4,8 +4,9 @@ import LogoIcon from '../../icons/LogoIcon'
 import { Row } from '../../globalStyles'
 
 const LogoContainer = styled(Row)`
-    justify-content: center;
-    align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 `
 const Buddy = styled.span`
     font-family: 'Lexend';

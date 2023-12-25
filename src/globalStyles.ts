@@ -41,14 +41,19 @@ const GlobalStyle = createGlobalStyle`
   body{
    
     font-size: 1rem;
+    /* width: 100vw;
+    height: 100vh; */
+    display: grid;
+    margin: 0;
+	padding: 0;
   }
 
  
 	
   *{
     box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	/* margin: 0;
+	padding: 0; */
 	font-family: 'Mulish', 'Inter', 'Montserrat', sans-serif, ;
     --label-color: #088F71;
     --box-shadow: 10px 50px 50px 0px rgba(0, 0, 0, 0.06)
@@ -59,15 +64,19 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-	width: 100%;
-	max-width: 1300px;
-	margin-right: auto;
-	margin-left: auto;
+   
+	
+    /* min-height: 100vh; */
+   
+   
+	/* max-width: 1300px; */
+	/* margin-right: auto;
+	margin-left: auto; */
 	/* padding: 50px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center; */
-    min-height: 100vh;
+    //min-height: 100vh;
 
 	@media screen and (max-width: 960px) {
 		padding:30px 0;
