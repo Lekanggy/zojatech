@@ -3,8 +3,9 @@ import { Footer, ItemWrapper, LeftItem, RightItem, SignUpWrapper } from './signU
 //import LogoIcon from '../../icons/LogoIcon'
 import Logo from '../../components/logo/Logo'
 import StackItems from './StackItems'
-import PasswordInput from '../../components/formInput/FormInput'
-import { EyeClosed } from '../../icons/EyeIcon'
+
+import RegisterForm from './RegisterForm'
+import GetHelp from './GetHelp'
 
 const ChooseSignUp = () => {
   return (
@@ -20,10 +21,10 @@ const ChooseSignUp = () => {
      </LeftItem>
 
      <RightItem>
-      <ItemWrapper>
-        <PasswordInput icn={<EyeClosed/>} inputType='password'/>
+      <ItemWrapper margin='3rem 0 0 0'>
+       <RegisterForm/>
+       <GetHelp/>
       </ItemWrapper>
-     
      </RightItem>
     </SignUpWrapper>
   )

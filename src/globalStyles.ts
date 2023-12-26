@@ -56,9 +56,8 @@ const GlobalStyle = createGlobalStyle`
 	padding: 0; */
 	font-family: 'Mulish', 'Inter', 'Montserrat', sans-serif, ;
     --label-color: #088F71;
-    --box-shadow: 10px 50px 50px 0px rgba(0, 0, 0, 0.06)
-	
-	//--linear-green: linear-gradient(316deg, #088F71 0%, #6ECB1A 100%);
+    --box-shadow: 10px 50px 50px 0px rgba(0, 0, 0, 0.06);
+    --primary-col: #FF8600;
   }
 
 `;
@@ -145,7 +144,7 @@ color?: string
 
 export const Text500 = styled.span<Color>`
 	color: ${({ color }) => (color ? color : '')};
-	font-family: "Inter";
+	font-family: "Mulish";
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 500;
@@ -162,76 +161,60 @@ export const Text700 = styled(Text500)`
 	font-weight: 700;
 `
 
-export const ScreenLayout = styled.div`
-	 //padding-top: 5rem;
-	margin-top: 2rem;
-    margin-inline: 1rem;
-    padding: 35px 20px;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    background: #1A1E26;
+// export const ScreenLayout = styled.div`
+// 	 //padding-top: 5rem;
+// 	margin-top: 2rem;
+//     margin-inline: 1rem;
+//     padding: 35px 20px;
+//     display: flex;
+//     align-items: center;
+//     border-radius: 20px;
+//     background: #1A1E26;
     
 
-    @media screen  and (min-width: 768px){
-       padding: 45px 65px; 
-       margin: 0 20px;
-       margin-top: 3rem;
-       //margin-top: ;
-    }
-`
-export const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.3rem;
+//     @media screen  and (min-width: 768px){
+//        padding: 45px 65px; 
+//        margin: 0 20px;
+//        margin-top: 3rem;
+//        //margin-top: ;
+//     }
+// `
+// export const Form = styled.form`
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 1.3rem;
 
-    @media screen  and (${device.mobile600}){
-       gap: 30px;
-       //margin-top: ;
-    }
-`
-export const FormItem = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 250px;
-    border: none;
-    @media screen  and (${device.mobile600}){
+//     @media screen  and (${device.mobile600}){
+//        gap: 30px;
+//        //margin-top: ;
+//     }
+// `
+// export const FormItem = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     width: 250px;
+//     border: none;
+//     @media screen  and (${device.mobile600}){
         
-        width: 350px;
-    }
+//         width: 350px;
+//     }
 
-    @media screen  and (min-width: 760px){
+//     @media screen  and (min-width: 760px){
         
-       width: 380px;
-    }
+//        width: 380px;
+//     }
 
-    @media screen  and (${device.laptopL}){
+//     @media screen  and (${device.laptopL}){
         
-        width: 400px;
-    }
+//         width: 400px;
+//     }
 
     
-`
-export const ButtonItem = styled(FormItem)`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding-top: 1.5rem;
-    @media screen  and (min-width: 760px){
-        
-       gap: 20px;
-    }
- 
-     /* @media screen  and (${device.laptopL}){
-         
-         width: 400px;
-     } */
-`
+// `
+
 export const Button = styled.button`
     display: flex;
     width: 100%;

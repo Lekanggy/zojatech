@@ -6,6 +6,8 @@ import Eye, { EyeClosed } from '../../icons/EyeIcon';
 
 const PasswordInputContainer = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
 `;
 
 const LeftIcon = styled.div`
@@ -17,10 +19,15 @@ const LeftIcon = styled.div`
 
 const PasswordInputField = styled.input`
   padding-left: 35px; /* Space for the left icon */
-  padding-right: 30px; /* Space for the eye icon */
+  padding-right: 35px; /* Space for the eye icon */
   width: 100%;
-  height: 100%;
-  border: none;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #DDE2E4;
+
+  &:focus{
+    outline-color: var(--primary-col);
+  }
 `;
 
 const EyeIcon = styled.div`
@@ -51,16 +58,15 @@ const PasswordInput = ({icn,  inputType='text', ...props}:InputProp) => {
       </LeftIcon>
       <PasswordInputField
         type={passwordVisible ? 'text'  : inputType}
-        placeholder="Enter your password"
         {...props}
       />
       {
          inputType === "password" && (
             <EyeIcon  onClick={togglePasswordVisibility}>
               
-                {
-                    passwordVisible ? <Eye/> : <EyeClosed/>
-                }
+              {
+                  passwordVisible ? <Eye/> : <EyeClosed/>
+              }
             </EyeIcon>
         )
       }
