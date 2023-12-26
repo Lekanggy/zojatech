@@ -4,8 +4,11 @@ import { Footer, ItemWrapper, LeftItem, RightItem, SignUpWrapper } from './signU
 import Logo from '../../components/logo/Logo'
 import StackItems from './StackItems'
 
-import RegisterForm from './RegisterForm'
+//import RegisterForm from './RegisterForm'
 import GetHelp from './GetHelp'
+//import ConfirmMail from '../verifyMail/ConfirmMail'
+//import VerifyMail from '../verifyMail/VerifyMail'
+import Verified from '../verifyMail/Verified'
 
 const ChooseSignUp = () => {
   return (
@@ -22,8 +25,11 @@ const ChooseSignUp = () => {
 
      <RightItem>
       <ItemWrapper margin='3rem 0 0 0'>
-       <RegisterForm/>
-       <GetHelp/>
+       {/* <RegisterForm/> */}
+       {/* <ConfirmMail/> */}
+       {/* <VerifyMail/> */}
+       <Verified/>
+       {/* <GetHelp/> */}
       </ItemWrapper>
      </RightItem>
     </SignUpWrapper>
