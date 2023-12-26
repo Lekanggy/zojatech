@@ -68,6 +68,13 @@ export const FormItem = styled(Column)`
     padding: 12px 0px;
 `
 
+export const ChooseItem = styled(FormItem)`
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #DDE2E4;
+`
+
 export const ButtonItem = styled(FormItem)<{activate?:string}>`
 
     .btn {
@@ -99,6 +106,19 @@ export const FormLabel = styled.label`
     font-weight: 400;
     line-height: 24px; 
     letter-spacing: -0.063px;
+`
+
+export const Hr = styled.hr`
+    width: 178px;
+    height: 0.5px;
+    background: #DDE2E4;
+`
+
+export const ChooseLabel = styled(FormLabel)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 `
 export const FormHeader = styled.h2`
     color:  #1D1D18;

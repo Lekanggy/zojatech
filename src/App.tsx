@@ -1,6 +1,6 @@
 //import { Container } from "./globalStyles"
 import GlobalStyle from "./globalStyles"
-import ChooseSignUp from "./pages/signUp/ChooseSignUp"
+import SignUp from "./pages/signUp/SignUp"
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
      <GlobalStyle/>
-     <ChooseSignUp/>
+     <SignUp/>
     </>
   )
 }
