@@ -1,6 +1,7 @@
 //import { Container } from "./globalStyles"
 import GlobalStyle from "./globalStyles"
-import SignUp from "./pages/signUp/SignUp"
+import Dashboard from "./pages/dashboard/Dashboard"
+//import SignUp from "./pages/signUp/SignUp"
 
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
      <GlobalStyle/>
-     <SignUp/>
+     {/* <SignUp/> */}
+     <Dashboard/>
     </>
   )
 }

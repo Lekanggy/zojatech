@@ -27,7 +27,6 @@ const ChooseSignUp = () => {
                     Sign up with google
                 </ChooseLabel>
             </ChooseItem>
-           
         </Form>
         <FormItem style={{paddingTop: "2rem"}}>
             <ServicePolicy>
