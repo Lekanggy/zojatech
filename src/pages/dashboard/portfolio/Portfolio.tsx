@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardGrowth, CardHandle, CardTitle, ColumItem, Desc, IconCircle, LeftItem, MedialHandle, MemberCard, MemberTitle, MemberWrapper, Members, NewsColumn, NewsHeader, NewsListItem, PortfolioWrapper, PostTitle, Reaction, ReactionWrapper, RevenueCard, RevenueHeader, RevenueItem, RevenueLeft, RightItem, Summary, SummaryItem, TrendTitle, TrendingItem, TrendingNewsCard, TrendingPost, TrendingWrapper, WatchLeft, WatchListCard, WatchListHeader, WatchListItem } from './portfolio.styled'
+import { CardGrowth, CardHandle, CardTitle, ColumItem, Desc, IconCircle, LeftItem, MedialHandle, MemberCard, MemberTitle, MemberWrapper, Members, NewsColumn, NewsHeader, NewsListItem, OverviewContainer, OverviewHeader, OverviewItem, OverviewRightHeader, OverviewTitle, PortfolioWrapper, PostTitle, Reaction, ReactionWrapper, RevenueCard, RevenueHeader, RevenueItem, RevenueLeft, RightItem, Summary, SummaryItem, TrendTitle, TrendingItem, TrendingNewsCard, TrendingPost, TrendingWrapper, WatchLeft, WatchListCard, WatchListHeader, WatchListItem } from './portfolio.styled'
 import LayerIcon1 from '../../../icons/LayerIcon1'
 import LayerIcon2 from '../../../icons/LayerIcon2'
 import LayerIcon3 from '../../../icons/LayerIcon3'
@@ -53,6 +53,17 @@ const Portfolio = () => {
                 )
               }
             </Summary>
+            <OverviewContainer>
+              <OverviewHeader>
+                <OverviewTitle>Overview</OverviewTitle>
+                <OverviewRightHeader>
+                  <OverviewItem active='active'>Robbin hood</OverviewItem>
+                  <OverviewItem>Amreitrade</OverviewItem>
+                  <OverviewItem>Fidelity</OverviewItem>
+                  <OverviewItem>Charles</OverviewItem>
+                </OverviewRightHeader>
+              </OverviewHeader>
+            </OverviewContainer>
             <TrendingPost>
               <TrendTitle>Trending Post</TrendTitle>
               <TrendingWrapper>

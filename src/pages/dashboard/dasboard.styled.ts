@@ -144,4 +144,16 @@ export const Circle = styled(Column)`
     height: 38px;
     border-radius: 50%;
     background: #fff;
+    position: relative;
+
+    .barge{
+        display: inline-flex;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        background: #FF5252;
+        right: 0.5rem;
+        top: 0.5rem;
+    }
 `

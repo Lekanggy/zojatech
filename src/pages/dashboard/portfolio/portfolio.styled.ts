@@ -116,6 +116,31 @@ export const Reaction = styled(Row)`
         letter-spacing: 0.28px;
     }
 `
+
+export const OverviewContainer = styled(TrendingPost)``
+export const OverviewHeader = styled(Row)`
+    justify-content: space-between;
+    align-items: center;
+`
+export const OverviewTitle = styled(TrendTitle)``
+export const OverviewChart = styled(Row)``
+export const OverviewRightHeader = styled(Row)`
+    gap: 16px;
+    align-items: center;
+`
+export const OverviewItem = styled(Row)<{active?: string}>`
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background:${({active})=> active === "active"? "#FF8600": "#F6F6F6"};
+    color:${({active})=> active === "active"? "#FFF": "#818187"};
+    font-family: 'Lexend';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 137.1%; 
+    letter-spacing: 0.24px;
+`
 export const Members = styled(TrendingPost)``
 export const MemberTitle = styled(TrendTitle)``
 export const MemberWrapper = styled(Row)`

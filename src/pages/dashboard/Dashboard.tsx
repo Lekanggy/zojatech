@@ -8,6 +8,7 @@ import { MdForwardToInbox } from "react-icons/md";
 import { IoAnalytics } from "react-icons/io5";
 import { CiDollar } from "react-icons/ci";
 import { IoSettingsOutline } from "react-icons/io5";
+import { FaRegBell } from "react-icons/fa";
 import User from '../../assets/user.png'
 import PasswordInput from '../../components/formInput/FormInput';
 import SearchIcon from '../../icons/SearchIcon';
@@ -100,7 +101,8 @@ const Dashboard = () => {
             <PlusIcon/>
           </Circle>
           <Circle>
-            <PlusIcon/>
+            <span className="barge"></span>
+            <FaRegBell/>
           </Circle>
         </HeaderRight>
        </Header>
