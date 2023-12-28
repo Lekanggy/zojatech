@@ -1,5 +1,28 @@
 import React from 'react'
-import { CardGrowth, CardHandle, CardTitle, ColumItem, Desc, IconCircle, LeftItem, MedialHandle, MemberCard, MemberTitle, MemberWrapper, Members, NewsColumn, NewsHeader, NewsListItem, OverviewContainer, OverviewHeader, OverviewItem, OverviewRightHeader, OverviewTitle, PortfolioWrapper, PostTitle, Reaction, ReactionWrapper, RevenueCard, RevenueHeader, RevenueItem, RevenueLeft, RightItem, Summary, SummaryItem, TrendTitle, TrendingItem, TrendingNewsCard, TrendingPost, TrendingWrapper, WatchLeft, WatchListCard, WatchListHeader, WatchListItem } from './portfolio.styled'
+import { 
+  CardGrowth, 
+  CardHandle, 
+  CardTitle, 
+  ColumItem, 
+  Desc, 
+  IconCircle, 
+  LeftItem, 
+  MedialHandle, 
+  MemberCard, 
+  MemberTitle, 
+  MemberWrapper, 
+  Members, NewsColumn, 
+  NewsHeader, NewsListItem,
+   OverviewContainer, 
+   OverviewHeader, 
+   OverviewItem, 
+   OverviewRightHeader, 
+   OverviewTitle, 
+   PortfolioWrapper, 
+   PostTitle, 
+   Reaction, 
+   ReactionWrapper, 
+   RevenueCard, RevenueHeader, RevenueItem, RevenueLeft, RightItem, Summary, SummaryItem, TrendTitle, TrendingItem, TrendingNewsCard, TrendingPost, TrendingWrapper, WatchLeft, WatchListCard, WatchListHeader, WatchListItem } from './portfolio.styled'
 import LayerIcon1 from '../../../icons/LayerIcon1'
 import LayerIcon2 from '../../../icons/LayerIcon2'
 import LayerIcon3 from '../../../icons/LayerIcon3'
@@ -12,6 +35,7 @@ import AnalyticIcon from '../../../icons/AnalyticIcon'
 import { ArrowIconDown } from '../../../icons/ArrowIcon'
 import { FaceBook, Instagram, LinkedIn } from '../../../icons/SocialMedialIcon'
 import ReplyIcon from '../../../icons/ReplyIcon'
+import { AnalyticChart } from './AnalyticChart'
 
 const cardItems = [
   {
@@ -63,6 +87,7 @@ const Portfolio = () => {
                   <OverviewItem>Charles</OverviewItem>
                 </OverviewRightHeader>
               </OverviewHeader>
+              <AnalyticChart/>
             </OverviewContainer>
             <TrendingPost>
               <TrendTitle>Trending Post</TrendTitle>

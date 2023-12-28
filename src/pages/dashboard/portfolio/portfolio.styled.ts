@@ -12,6 +12,7 @@ export const PortfolioWrapper = styled(Row)`
 export const LeftItem = styled(Column)`
     //background: red;
     justify-content: space-between;
+    gap: 20px;
     //align-items: center;
 `
 export const Summary = styled(Row)`
@@ -123,7 +124,9 @@ export const OverviewHeader = styled(Row)`
     align-items: center;
 `
 export const OverviewTitle = styled(TrendTitle)``
-export const OverviewChart = styled(Row)``
+export const OverviewChart = styled(Row)`
+    height: 320px;
+`
 export const OverviewRightHeader = styled(Row)`
     gap: 16px;
     align-items: center;
@@ -190,8 +193,8 @@ export const CardGrowth = styled(Row)`
     }
 `
 export const RightItem = styled(Column)`
-  justify-content: space-between;
-  gap: 20px;
+ justify-content: space-between;
+ 
 `
 
 export const WatchListCard = styled(Column)` 
