@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardGrowth, CardHandle, CardTitle, ColumItem, Desc, IconCircle, LeftItem, MemberCard, MemberTitle, MemberWrapper, Members, PortfolioWrapper, PostTitle, Reaction, ReactionWrapper, RightItem, Summary, SummaryItem, TrendTitle, TrendingItem, TrendingPost, TrendingWrapper } from './portfolio.styled'
+import { CardGrowth, CardHandle, CardTitle, ColumItem, Desc, IconCircle, LeftItem, MedialHandle, MemberCard, MemberTitle, MemberWrapper, Members, NewsColumn, NewsHeader, NewsListItem, PortfolioWrapper, PostTitle, Reaction, ReactionWrapper, RevenueCard, RevenueHeader, RevenueItem, RevenueLeft, RightItem, Summary, SummaryItem, TrendTitle, TrendingItem, TrendingNewsCard, TrendingPost, TrendingWrapper, WatchLeft, WatchListCard, WatchListHeader, WatchListItem } from './portfolio.styled'
 import LayerIcon1 from '../../../icons/LayerIcon1'
 import LayerIcon2 from '../../../icons/LayerIcon2'
 import LayerIcon3 from '../../../icons/LayerIcon3'
@@ -7,6 +7,11 @@ import { Obj } from '../Dashboard'
 import CommentIcon from '../../../icons/CommentIcon'
 import GrowthIcon from '../../../icons/GrowthIcon'
 import Avatar from '../../../assets/avatar.png'
+import NewsImg from '../../../assets/rectanglee.png'
+import AnalyticIcon from '../../../icons/AnalyticIcon'
+import { ArrowIconDown } from '../../../icons/ArrowIcon'
+import { FaceBook, Instagram, LinkedIn } from '../../../icons/SocialMedialIcon'
+import ReplyIcon from '../../../icons/ReplyIcon'
 
 const cardItems = [
   {
@@ -59,16 +64,16 @@ const Portfolio = () => {
                   </Desc>
                   <ReactionWrapper>
                     <Reaction>
-                      <CommentIcon/>
-                      <span className="reaction_txt">230</span>
+                      ❤️
+                      <span className="reaction_txt">200</span>
                     </Reaction>
                     <Reaction>
                       <CommentIcon/>
                       <span className="reaction_txt">230</span>
                     </Reaction>
                     <Reaction>
-                      <CommentIcon/>
-                      <span className="reaction_txt">230</span>
+                      <ReplyIcon/>
+                      <span className="reaction_txt">130</span>
                     </Reaction>
                   </ReactionWrapper>
                 </TrendingItem>
@@ -80,16 +85,16 @@ const Portfolio = () => {
                   </Desc>
                   <ReactionWrapper>
                     <Reaction>
-                      <CommentIcon/>
-                      <span className="reaction_txt">230</span>
+                      ❤️
+                      <span className="reaction_txt">200</span>
                     </Reaction>
                     <Reaction>
                       <CommentIcon/>
                       <span className="reaction_txt">230</span>
                     </Reaction>
                     <Reaction>
-                      <CommentIcon/>
-                      <span className="reaction_txt">230</span>
+                      <ReplyIcon/>
+                      <span className="reaction_txt">130</span>
                     </Reaction>
                   </ReactionWrapper>
                 </TrendingItem>
@@ -138,7 +143,87 @@ const Portfolio = () => {
             </Members>
         </LeftItem>
         <RightItem>
-            rigfhjtr
+           <WatchListCard>
+            <WatchListHeader>
+              <span className="title">Watch List</span>
+              <span className="view">View all</span>
+            </WatchListHeader>
+            <WatchListItem>
+              <WatchLeft>
+                <span className="upper_txt">AAPL  <ArrowIconDown/></span>
+                <span className="amt_txt">$123</span>
+                <span className="margin_txt">+0.045%</span>
+              </WatchLeft>
+              <AnalyticIcon/>
+            </WatchListItem>
+            <WatchListItem>
+              <WatchLeft>
+                <span className="upper_txt">AAPL  <ArrowIconDown/></span>
+                <span className="amt_txt">$123</span>
+                <span className="margin_txt">+0.045%</span>
+              </WatchLeft>
+              <AnalyticIcon/>
+            </WatchListItem>
+           </WatchListCard>
+           <RevenueCard>
+            <RevenueHeader>
+              <span className="title">Revenue</span>
+            </RevenueHeader>
+            <RevenueItem>
+              <RevenueLeft>
+                <span className="upper_txt">$4000</span>
+                <span className="small_txt">Recently Added Pages</span>
+              </RevenueLeft>
+              <MedialHandle  bg="rgba(23, 115, 234, 0.08)">
+                <FaceBook/>
+              </MedialHandle>
+            </RevenueItem>
+            <RevenueItem>
+              <RevenueLeft>
+                <span className="upper_txt">$2,120</span>
+                <span className="small_txt">Video Monetization</span>
+              </RevenueLeft>
+              <MedialHandle  bg="rgba(235, 51, 72, 0.08)">
+                <Instagram/>
+              </MedialHandle>
+            </RevenueItem>
+            <RevenueItem>
+              <RevenueLeft>
+                <span className="upper_txt">$1,175</span>
+                <span className="small_txt">Community Buildup</span>
+              </RevenueLeft>
+              <MedialHandle  bg="rgba(39, 100, 172, 0.08)">
+                <LinkedIn/>
+              </MedialHandle>
+            </RevenueItem>
+           </RevenueCard>
+
+           <TrendingNewsCard>
+            <NewsHeader>
+              <span className="title">Trending News</span>
+            </NewsHeader>
+            <NewsListItem>
+              <img src={NewsImg} alt='new image'/>
+              <NewsColumn>
+                <span className="new_txt">Russia & Ukraine War</span>
+                <span className="new_small">Marketing is evolving. It's chang...</span>
+              </NewsColumn>
+            </NewsListItem>
+            <NewsListItem>
+              <img src={NewsImg} alt='new image'/>
+              <NewsColumn>
+                <span className="new_txt">Elon Musk bought Twitter</span>
+                <span className="new_small">Twitter is the most useful social pl...</span>
+              </NewsColumn>
+            </NewsListItem>
+            <NewsListItem>
+              <img src={NewsImg} alt='new image'/>
+              <NewsColumn>
+                <span className="new_txt">Fuel Crisis Everywhere</span>
+                <span className="new_small">Due to covid situation in 2020 the...</span>
+              </NewsColumn>
+            </NewsListItem>
+           </TrendingNewsCard>
         </RightItem>
     </PortfolioWrapper>
   )

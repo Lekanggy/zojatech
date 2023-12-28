@@ -9,10 +9,12 @@ const LogoContainer = styled(Row)`
   gap: 10px;
 `
 const Buddy = styled.span`
+    display: inline-flex;
     font-family: 'Lexend';
-    font-weight: 600;
+    font-weight: 600 !important;
     font-size: 25px;
-    line-height: 133%
+    line-height: 133%;
+    color: #3B3B45 !important;
 `
 
 const Logo = () => {
