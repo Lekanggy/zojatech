@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BottomSidebar, DashboardLayout, Logout, MainContent, SideBar, TopSidebar, TopsideItem, TopsideRow } from './dasboard.styled'
+import { BottomSidebar, Circle, DashboardLayout, Header, HeaderLeft, HeaderRight, Logout, MainContent, SearchInput, SideBar, TopSidebar, TopsideItem, TopsideRow } from './dasboard.styled'
 import Logo from '../../components/logo/Logo'
 import { LuUsers2 } from "react-icons/lu";
 import { RiLoginBoxLine } from "react-icons/ri";
@@ -9,8 +9,12 @@ import { IoAnalytics } from "react-icons/io5";
 import { CiDollar } from "react-icons/ci";
 import { IoSettingsOutline } from "react-icons/io5";
 import User from '../../assets/user.png'
+import PasswordInput from '../../components/formInput/FormInput';
+import SearchIcon from '../../icons/SearchIcon';
+import PlusIcon from '../../icons/PlusIcon';
+import Portfolio from './portfolio/Portfolio';
 
-type Obj = {[k:string]:any}
+export type Obj = {[k:string]:any}
 const sideItems = [
   {
     id: 1,
@@ -86,7 +90,21 @@ const Dashboard = () => {
        </BottomSidebar>
       </SideBar>
       <MainContent>
-        main
+       <Header>
+        <HeaderLeft>My Portfolio</HeaderLeft>
+        <HeaderRight>
+          <SearchInput>
+            <PasswordInput icn={<SearchIcon/>} inputType='text' placeholder='Search' className='search'/>
+          </SearchInput>
+          <Circle>
+            <PlusIcon/>
+          </Circle>
+          <Circle>
+            <PlusIcon/>
+          </Circle>
+        </HeaderRight>
+       </Header>
+       <Portfolio/>
       </MainContent>
     </DashboardLayout>
   )

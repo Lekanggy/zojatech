@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Column, Row } from "../../globalStyles";
+import { Column, Row, Text700 } from "../../globalStyles";
 
 
 export const DashboardLayout = styled.div`
@@ -20,7 +20,7 @@ export const TopSidebar = styled(Column)`
 export const TopsideItem = styled(Column)`
     /* align-items: center; */
     gap: 10px;
-    padding-top: 1rem;
+    padding-top: 1 rem;
     
 `
 export const TopsideRow = styled(Row)<{act?:string}>`
@@ -109,5 +109,39 @@ export const Logout = styled(Row)`
     letter-spacing: 0.28px;
 `
 export const MainContent = styled.div`
-    background: red;
+    background: #f6f6f6;
+    padding:20px 30px;
+`
+
+export const Header = styled(Row)`
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const HeaderLeft = styled(Text700)`
+    color: #3B3B45;
+    font-family: 'Lexend';
+    font-size: 25px;
+    line-height: 133%;
+`
+export const HeaderRight = styled(Row)`
+    gap: 10px;
+    align-items: center;
+`
+export const SearchInput = styled.div`
+   
+    
+    .search{
+        border-radius: 16px;
+        width: 422px;
+        height: 38px;
+    }
+`
+export const Circle = styled(Column)`
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #fff;
 `
