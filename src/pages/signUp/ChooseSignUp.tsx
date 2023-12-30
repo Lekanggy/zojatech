@@ -1,4 +1,4 @@
-//import React, { useState } from 'react'
+
 import {CardContainer, ChooseItem, ChooseLabel, Form, FormHeader, FormItem, Hr, ServicePolicy } from './signUp.styled'
 import ChooseIcon from '../../icons/ChooseIcon'
 import Google from '../../icons/Google'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { ButtonItem, CardContainer, Desc, Form, FormHeader, FormItem, FormLabel, ServicePolicy } from '../signUp/signUp.styled'
 import PasswordInput from '../../components/formInput/FormInput'
 

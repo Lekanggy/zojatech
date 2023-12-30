@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { ChatImageLeft, ChatImageRight, ChatsLeft, ChatsRight, InputDetailsIcons, InputSearch, MessageLeft, MessageRight, MessageWrapper, MsgBodyWrapper, MsgItem, MsgLeftBottom, MsgLeftTop, MsgProfile, MsgRightBody, MsgRightHeader, RoundedImage, ScrollMsg, TypeMsg } from './message.styled'
 import { FiEdit2 } from "react-icons/fi";
 import { Column, Row } from '../../../globalStyles';

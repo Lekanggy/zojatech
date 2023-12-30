@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styled from 'styled-components'
 import LogoIcon from '../../icons/LogoIcon'
 import { Row } from '../../globalStyles'

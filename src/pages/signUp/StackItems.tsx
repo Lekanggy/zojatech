@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { CheckItem, StackText, Stacks } from './signUp.styled'
 import { Row } from '../../globalStyles'
 import Check from '../../assets/Checkboxes.png'

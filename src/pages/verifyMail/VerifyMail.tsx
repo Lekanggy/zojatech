@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 
 import OtpBox from '../../components/otp-input/OtpBox'
 import {FormHeader, FormItem, ServicePolicy } from '../signUp/signUp.styled'

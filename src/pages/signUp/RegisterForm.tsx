@@ -13,7 +13,7 @@ import SideEmailIcon from '../../icons/SideEmailIcon'
 
 const url = import.meta.env.VITE_APP_BASE_URL + "register"
 
-console.log(url)
+
 const RegisterForm = () => {
 
     const navigate = useNavigate()
