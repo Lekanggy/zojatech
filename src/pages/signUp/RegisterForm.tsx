@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { ButtonItem, CardContainer, Desc, Form, FormHeader, FormItem, FormLabel, ServicePolicy } from './signUp.styled'
 import PasswordInput from '../../components/formInput/FormInput'
 
@@ -6,11 +6,21 @@ import UserIcon from '../../icons/UserIcon'
 import EmailIcon from '../../icons/EmailIcon'
 import Lock from '../../icons/Lock'
 
+import useFormSubmission from '../../hooks/useFormSubmission'
+import { useNavigate } from 'react-router-dom'
+import SideEmailIcon from '../../icons/SideEmailIcon'
+//import { useSubmit } from 'react-router-dom'
+
+const url = import.meta.env.VITE_APP_BASE_URL + "register"
+
+console.log(url)
 const RegisterForm = () => {
 
+    const navigate = useNavigate()
     const [activate, setActivate] = useState(false)
+    const {handleData, handleSubmit} = useFormSubmission(url, 'register', navigate)
 
-    console.log('ac', activate)
+   
   return (
     <CardContainer>
         <Form>
@@ -27,6 +37,10 @@ const RegisterForm = () => {
                         inputType='text' 
                         placeholder='First Name'
                         onFocus={()=>setActivate(true)}
+                        name="first_name"
+                        onChange={handleData}
+                        id="first_name"
+                        required
                     />
                 </FormItem>
                 <FormItem style={{width: '180px'}}>
@@ -38,18 +52,26 @@ const RegisterForm = () => {
                         inputType='text' 
                         placeholder='Last Named'
                         onFocus={()=>setActivate(true)}
+                        name="last_name"
+                        onChange={handleData}
+                        id="last_name"
+                        required
                     />
                 </FormItem>
             </FormItem>
             <FormItem>
                 {
-                    activate &&  <FormLabel>Email</FormLabel>
+                    activate &&  <FormLabel>Email <SideEmailIcon/></FormLabel>
                 }
                 <PasswordInput 
                     icn={<EmailIcon/>} 
                     inputType='email' 
                     placeholder='Work mail'
                     onFocus={()=>setActivate(true)}
+                    name="email"                  
+                    onChange={handleData}
+                    id="email"
+                    required
                 />
             </FormItem>
             <FormItem>
@@ -61,10 +83,14 @@ const RegisterForm = () => {
                     inputType='password' 
                     placeholder='Password'
                     onFocus={()=>setActivate(true)}
+                    name="password"
+                    onChange={handleData}
+                    id="password"
+                    required
                 />
             </FormItem>
             <ButtonItem activate={activate ? 'true' : 'false'}>
-               <button className='btn' disabled={activate ? false : true}>
+               <button className='btn' disabled={activate ? false : true} onClick={handleSubmit}>
                  Create account
                </button>
             </ButtonItem>
@@ -76,7 +102,7 @@ const RegisterForm = () => {
             </ServicePolicy>
         </FormItem>
 
-        <FormItem style={{marginTop: '1rem'}}>
+        <FormItem style={{marginTop: '4rem'}}>
             <ServicePolicy>
               Already have an account? <span className="service">Login</span>
             </ServicePolicy>

@@ -30,5 +30,5 @@ export const BtnItem = styled(ButtonItem) `
         color: #fff;
         background: var(--primary-col);
     }
-   
+   cursor: pointer;
 `

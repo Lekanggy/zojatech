@@ -8,6 +8,7 @@ const PasswordInputContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
 const LeftIcon = styled.div`
@@ -41,9 +42,10 @@ const EyeIcon = styled.div`
 type InputProp = React.InputHTMLAttributes<HTMLInputElement> & {
     inputType?: string
     icn?:React.ReactNode
+    itemRef?: React.RefAttributes<any>
 }
 
-const PasswordInput = ({icn,  inputType='text', ...props}:InputProp) => {
+const PasswordInput = ({icn,itemRef,  inputType='text', ...props}:InputProp) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -58,6 +60,7 @@ const PasswordInput = ({icn,  inputType='text', ...props}:InputProp) => {
       </LeftIcon>
       <PasswordInputField
         type={passwordVisible ? 'text'  : inputType}
+        ref={itemRef}
         {...props}
       />
       {

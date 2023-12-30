@@ -3,22 +3,25 @@ import { Column, Row, Text400 } from "../../globalStyles";
 
 
 export const SignUpWrapper = styled(Row)`
-   height: 100vh;
+   min-height: 900px;
+   max-height: 1024px;
+   position: relative;
 `
 export const LeftItem = styled(Column)`
     flex: 1;
     background: #fff;
+   
 `
 
 export const RightItem = styled(Column)`
-    position: relative;
+    //position: relative;
     /* margin-bottom: 3rem; */
     flex: 1;
     background: #F8FAFC;
 `
 
 export const ItemWrapper = styled(Column)`
-    position: relative;
+    //position: relative;
     padding: 50px;
 `
 
@@ -100,6 +103,9 @@ export const ButtonItem = styled(FormItem)<{activate?:string}>`
 `
 
 export const FormLabel = styled.label`
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     color:  #5B6871;
     font-family: 'Mulish';
     font-size: 14px;
@@ -119,6 +125,7 @@ export const ChooseLabel = styled(FormLabel)`
     justify-content: center;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 `
 export const FormHeader = styled.h2`
     color:  #1D1D18;
@@ -151,9 +158,11 @@ export const ServicePolicy = styled(Text400)`
 
 export const GetHelpWrapper = styled.div`
     position: absolute;
-    bottom: -10rem;
+    //bottom: -10rem;
     right: 3rem;
+    top: 50rem;
     padding-bottom: 3rem;
+    
 `
 export const GetHelpContainer = styled(Row)`
     justify-content: center;

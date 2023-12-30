@@ -13,7 +13,8 @@ import User from '../../assets/user.png'
 import PasswordInput from '../../components/formInput/FormInput';
 import SearchIcon from '../../icons/SearchIcon';
 import PlusIcon from '../../icons/PlusIcon';
-import Portfolio from './portfolio/Portfolio';
+
+import { Outlet, useNavigate } from 'react-router-dom';
 
 export type Obj = {[k:string]:any}
 const sideItems = [
@@ -21,14 +22,14 @@ const sideItems = [
     id: 1,
     txt: "My Portfolio",
     icn: <LuUser2/>,
-    route: '/smart-admin/panel/user-profile'
+    route: '/dashboard'
 
   },
   {
     id: 2,
     txt: "My Groups",
     icn: <LuUsers2/>,
-    route: '/smart-admin/panel/create-invite'
+    route: '/dashboard'
 
   },
   
@@ -36,29 +37,36 @@ const sideItems = [
     id: 3,
     txt: "Messages",
     icn: <MdForwardToInbox/>,
-    route: '/smart-admin/panel/feedback'
+    route: '/dashboard/message'
   },
    {
     id: 4,
     txt: "Analytics",
     icn: <IoAnalytics/>,
-    route: '/smart-admin/panel/create-bonus'
+    route: ''
   },
   {
     id: 5,
     txt: "Packs",
     icn: <CiDollar/>,
-    route: '/smart-admin/panel/bonus-token'
+    route: '/dashboard'
   },
   {
     id: 6,
     txt: "Settings",
     icn: <IoSettingsOutline/>,
-    route: '/smart-admin/panel/create-survey'
+    route: '/dashboard'
   }
 ]
 const Dashboard = () => {
-  const [cls, setCls] = useState(0)
+  const [cls, setCls] = useState(1)
+  const navigate = useNavigate()
+
+  const handleRoute = (route:string, index:number)=>{
+    setCls(index)
+    navigate(route)
+  }
+
   return (
     <DashboardLayout>
       <SideBar>
@@ -70,7 +78,7 @@ const Dashboard = () => {
           <TopsideItem>
             {
               sideItems.map((d:Obj, idx:number)=>
-                  <TopsideRow onClick={()=>setCls(idx+1)} act={cls === d?.id ? "active" : "none"}>
+                  <TopsideRow onClick={()=>handleRoute(d?.route, idx+1)} act={cls === d?.id ? "active" : "none"}>
                     <span className="icon">
                      {d?.icn}
                     </span>
@@ -106,7 +114,8 @@ const Dashboard = () => {
           </Circle>
         </HeaderRight>
        </Header>
-       <Portfolio/>
+       {/* <Portfolio/> */}
+       <Outlet/>
       </MainContent>
     </DashboardLayout>
   )

@@ -11,6 +11,7 @@ import GetHelp from './GetHelp'
 //import Verified from '../verifyMail/Verified'
 //import LoginForm from '../login/Login'
 import ChooseSignUp from './ChooseSignUp'
+import { Outlet } from 'react-router-dom'
 
 const SignUp = () => {
   return (
@@ -32,7 +33,8 @@ const SignUp = () => {
        {/* <VerifyMail/> */}
        {/* <LoginForm/> */}
        {/* <Verified/> */}
-       <ChooseSignUp/>
+       {/* <ChooseSignUp/> */}
+       <Outlet/>
        <GetHelp/>
       </ItemWrapper>
      </RightItem>

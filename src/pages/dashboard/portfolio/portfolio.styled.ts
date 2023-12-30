@@ -122,10 +122,11 @@ export const OverviewContainer = styled(TrendingPost)``
 export const OverviewHeader = styled(Row)`
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 1rem;
 `
 export const OverviewTitle = styled(TrendTitle)``
 export const OverviewChart = styled(Row)`
-    height: 320px;
+    height: 200px;
 `
 export const OverviewRightHeader = styled(Row)`
     gap: 16px;

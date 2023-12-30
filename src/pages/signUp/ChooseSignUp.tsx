@@ -1,11 +1,13 @@
 //import React, { useState } from 'react'
-import {CardContainer, ChooseItem, ChooseLabel, Form, FormHeader, FormItem, Hr, ServicePolicy } from '../signUp/signUp.styled'
+import {CardContainer, ChooseItem, ChooseLabel, Form, FormHeader, FormItem, Hr, ServicePolicy } from './signUp.styled'
 import ChooseIcon from '../../icons/ChooseIcon'
 import Google from '../../icons/Google'
+import { useNavigate } from 'react-router-dom'
 
 
 const ChooseSignUp = () => {
 
+    const navigate = useNavigate()
   
   return (
     <CardContainer>
@@ -13,7 +15,7 @@ const ChooseSignUp = () => {
             <FormHeader>Register your account</FormHeader>
           
             <ChooseItem>
-                <ChooseLabel>
+                <ChooseLabel onClick={()=>navigate('/register')}>
                     <ChooseIcon/>
                    Sign up with email
                 </ChooseLabel>

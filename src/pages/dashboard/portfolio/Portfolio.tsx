@@ -13,6 +13,7 @@ import {
   MemberWrapper, 
   Members, NewsColumn, 
   NewsHeader, NewsListItem,
+   OverviewChart,
    OverviewContainer, 
    OverviewHeader, 
    OverviewItem, 
@@ -87,7 +88,9 @@ const Portfolio = () => {
                   <OverviewItem>Charles</OverviewItem>
                 </OverviewRightHeader>
               </OverviewHeader>
-              <AnalyticChart/>
+              <OverviewChart>
+                <AnalyticChart/>
+              </OverviewChart>
             </OverviewContainer>
             <TrendingPost>
               <TrendTitle>Trending Post</TrendTitle>
